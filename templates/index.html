@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Trader AI - Ross Cameron System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1>📈 Momentum Trader AI</h1>
+            <p class="subtitle">מערכת ניתוח מומנטום לפי שיטת Ross Cameron</p>
+            <div class="disclaimer">
+                ⚠️ זהו ניתוח חינוכי בלבד. אין לראות בכך ייעוץ השקעות אישי.
+            </div>
+        </header>
+
+        <!-- Controls -->
+        <div class="controls">
+            <div class="control-group">
+                <label for="agent-select">בחר AI Agent:</label>
+                <select id="agent-select">
+                    {% for agent in agents %}
+                    <option value="{{ agent }}">{{ agent|title }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+
+            <button id="scan-btn" class="btn btn-primary">🔍 סרוק מניות</button>
+            <button id="refresh-btn" class="btn btn-secondary">🔄 רענן</button>
+
+            <div class="exchange-rate" id="exchange-rate">
+                שער דולר: <span id="usd-ils-rate">טוען...</span> ₪
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loading" class="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>טוען נתונים...</p>
+        </div>
+
+        <!-- Results Container -->
+        <div id="results-container">
+            <!-- Stock Cards Will Be Inserted Here -->
+        </div>
+
+        <!-- Modal for Detailed Analysis -->
+        <div id="analysis-modal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="modal-body">
+                    <!-- Analysis details will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

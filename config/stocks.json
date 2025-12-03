@@ -1,0 +1,28 @@
+{
+  "israeli_stocks": [
+    "TEVA.TA",
+    "NICE.TA",
+    "ESLT.TA",
+    "MNDY.TA",
+    "CYBR.TA",
+    "FVRR.TA"
+  ],
+  "us_stocks_popular_in_israel": [
+    "NVDA",
+    "TSLA",
+    "AAPL",
+    "MSFT",
+    "GOOGL",
+    "META",
+    "AMZN",
+    "AMD",
+    "PLTR"
+  ],
+  "momentum_criteria": {
+    "min_rvol": 2.0,
+    "min_gap_percent": 3.0,
+    "min_volume": 100000,
+    "max_price": 500,
+    "min_price": 1
+  }
+}
