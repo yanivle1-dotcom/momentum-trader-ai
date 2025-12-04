@@ -1,0 +1,43 @@
+{
+  "name": "Momentum Trader AI",
+  "short_name": "Trader AI",
+  "description": "Professional Investment Analysis System with Real-time Alerts",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#0f3460",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/static/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "business"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Dashboard",
+      "url": "/",
+      "description": "Main trading dashboard"
+    },
+    {
+      "name": "Investment",
+      "url": "/investment-dashboard",
+      "description": "Investment analysis"
+    },
+    {
+      "name": "Market Research",
+      "url": "/market-research",
+      "description": "Market research tools"
+    }
+  ]
+}
